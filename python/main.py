@@ -8,16 +8,16 @@ import json, re
 from excell_parse import parse
 from data_load import mongo_load
 #############################
-### This file takes source and 
+### This file takes source and
 ### destination file arguments
 ### and asks for MongoDB admin
-### validation username and 
+### validation username and
 ### password to load directly
 ### mongodb instance
-### 
-### 
+###
+###
 ### KNOWN ISSUES:
-### UTF ENCODING NOT WORKING FOR FOREIGN LANG utils.py 
+### UTF ENCODING NOT WORKING FOR FOREIGN LANG utils.py
 ### GEOCODING API LIMIT utils.py
 #############################
 
@@ -57,7 +57,7 @@ def main(argv):
 		mongo_load(data,db,collection,username,password)
 		print "output stored in %s and MongoDB" %  argv[0]+".json"
 	else:
-		print "output stored in %s" % argv[0]+".json"
+		print "output stored in %s" % outfile #argv[0]+".json"
 
 if __name__ == '__main__':
 	main(argv[1:])
